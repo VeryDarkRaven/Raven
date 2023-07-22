@@ -1,0 +1,262 @@
+/* Zeroing */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* End zeroing */
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-background: #181818;
+  --color-arrow: #4C4C4C;
+  --color-arrow-hover: #7F7F7F;
+  --color-arrow-active: #B3B3B3;
+  --color-text: #E6E6E6;
+  --family-text: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: Thinking_of_Betty;
+  font-display: swap;
+  src: url("../fonts/Thinking_of_Betty.woff2") format("woff2"), url("../fonts/Thinking_of_Betty.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.object__svg {
+  display: none;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 14px;
+  font-family: var(--family-text);
+  overflow: hidden;
+}
+
+.container {
+  width: 80%;
+  max-width: 1046px;
+  min-height: inherit;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.container_column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sections style */
+.front,
+.attainments,
+.portfolio,
+.contact {
+  min-height: 100vh;
+}
+.front h2,
+.attainments h2,
+.portfolio h2,
+.contact h2 {
+  color: var(--color-text);
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+  .front h2,
+  .attainments h2,
+  .portfolio h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+}
+/* sections style */
+/* screen controls style */
+.scontrols {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.scontrols__scroll-buttons {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.scontrols__scroll-buttons .scroll-button {
+  border: 2px solid var(--color-arrow);
+  border-radius: 50%;
+  background: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transition: border 0.5s ease 0s, visibility 0.5s ease 0s, opacity 0.5s ease 0s;
+}
+.scontrols__scroll-buttons .scroll-button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+}
+.scontrols__scroll-buttons .scroll-button svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--color-arrow);
+  object-fit: contain;
+  transition: stroke 0.5s ease 0s;
+}
+.scontrols__scroll-buttons .scroll-button:hover {
+  border-color: var(--color-arrow-hover);
+}
+.scontrols__scroll-buttons .scroll-button:hover svg {
+  stroke: var(--color-arrow-hover);
+}
+.scontrols__scroll-buttons .scroll-button:active {
+  border-color: var(--color-arrow-active);
+}
+.scontrols__scroll-buttons .scroll-button:active svg {
+  stroke: var(--color-arrow-active);
+}
+.scontrols__scroll-buttons .scroll-button.button_inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+.scontrols__scroll-buttons .top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.scontrols__scroll-buttons .top span {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.scontrols__scroll-buttons .right {
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+.scontrols__scroll-buttons .right span {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.scontrols__scroll-buttons .bottom {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.scontrols__scroll-buttons .bottom span {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.scontrols__scroll-buttons .left {
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.scontrols__scroll-buttons .left span {
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+@media (max-width: 650px) {
+  .scontrols__scroll-buttons .scroll-button {
+    width: 36px;
+    height: 36px;
+  }
+}
+/* end screen controls style */
+/* front style */
+.front h1 {
+  color: var(--color-text);
+  font-size: 5rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+  .front h1 {
+    font-size: 3rem;
+  }
+}
+/* end front style */
+/* attainments style */
+/* ned attainments style */
