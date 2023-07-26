@@ -1,37 +1,29 @@
 /* Zeroing */
-
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-:focus,
-:active {
+:focus, :active {
   outline: none;
 }
 
-a:focus,
-a:active {
+a:focus, a:active {
   outline: none;
 }
 
-nav,
-footer,
-header,
-aside {
+nav, footer, header, aside {
   display: block;
 }
 
-html,
-body {
+html, body {
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -42,9 +34,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-input,
-button,
-textarea {
+input, button, textarea {
   font-family: inherit;
 }
 
@@ -61,8 +51,7 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a,
-a:visited {
+a, a:visited {
   text-decoration: none;
 }
 
@@ -78,18 +67,12 @@ img {
   vertical-align: top;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
 }
 
 /* End zeroing */
-
 :root {
   --color-white: #fff;
   --color-black: #000;
@@ -118,47 +101,29 @@ body {
   max-width: 1046px;
   min-height: inherit;
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 60px 0;
 }
 
 .container_column-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* sections style */
-
 .front,
 .attainments,
 .portfolio,
 .contact {
   min-height: 100vh;
 }
-
 .front h2,
 .attainments h2,
 .portfolio h2,
@@ -170,12 +135,19 @@ body {
   text-transform: uppercase;
 }
 
+@media (max-width: 650px) {
+  .front h2,
+  .attainments h2,
+  .portfolio h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+}
 /* sections style */
-
 /* screen controls style */
-
 .scontrols {
   position: fixed;
+  z-index: 1;
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -186,7 +158,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .scontrols__scroll-buttons .scroll-button {
   border: 2px solid var(--color-arrow);
   border-radius: 50%;
@@ -194,11 +165,8 @@ body {
   width: 50px;
   height: 50px;
   position: absolute;
-  -webkit-transition: border 0.5s ease 0s, visibility 0.5s ease 0s, opacity 0.5s ease 0s;
-  -o-transition: border 0.5s ease 0s, visibility 0.5s ease 0s, opacity 0.5s ease 0s;
   transition: border 0.5s ease 0s, visibility 0.5s ease 0s, opacity 0.5s ease 0s;
 }
-
 .scontrols__scroll-buttons .scroll-button span {
   position: absolute;
   top: 50%;
@@ -206,99 +174,98 @@ body {
   width: 80%;
   height: 80%;
 }
-
 .scontrols__scroll-buttons .scroll-button svg {
   width: 100%;
   height: 100%;
   stroke: var(--color-arrow);
-  -o-object-fit: contain;
-     object-fit: contain;
-  -webkit-transition: stroke 0.5s ease 0s;
-  -o-transition: stroke 0.5s ease 0s;
+  object-fit: contain;
   transition: stroke 0.5s ease 0s;
 }
-
 .scontrols__scroll-buttons .scroll-button:hover {
   border-color: var(--color-arrow-hover);
 }
-
 .scontrols__scroll-buttons .scroll-button:hover svg {
   stroke: var(--color-arrow-hover);
 }
-
 .scontrols__scroll-buttons .scroll-button:active {
   border-color: var(--color-arrow-active);
 }
-
 .scontrols__scroll-buttons .scroll-button:active svg {
   stroke: var(--color-arrow-active);
 }
-
 .scontrols__scroll-buttons .scroll-button.button_inactive {
   visibility: hidden;
   opacity: 0;
 }
-
 .scontrols__scroll-buttons .top {
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
-
 .scontrols__scroll-buttons .top span {
-  -webkit-transform: translate(-50%, -50%) rotate(0deg);
-      -ms-transform: translate(-50%, -50%) rotate(0deg);
-          transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
 }
-
 .scontrols__scroll-buttons .right {
   top: 50%;
   left: 100%;
-  -webkit-transform: translate(-100%, -50%);
-      -ms-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
 }
-
 .scontrols__scroll-buttons .right span {
-  -webkit-transform: translate(-50%, -50%) rotate(90deg);
-      -ms-transform: translate(-50%, -50%) rotate(90deg);
-          transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
-
 .scontrols__scroll-buttons .bottom {
   top: 100%;
   left: 50%;
-  -webkit-transform: translate(-50%, -100%);
-      -ms-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
 }
-
 .scontrols__scroll-buttons .bottom span {
-  -webkit-transform: translate(-50%, -50%) rotate(180deg);
-      -ms-transform: translate(-50%, -50%) rotate(180deg);
-          transform: translate(-50%, -50%) rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
 }
-
 .scontrols__scroll-buttons .left {
   top: 50%;
   left: 0;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
-
 .scontrols__scroll-buttons .left span {
-  -webkit-transform: translate(-50%, -50%) rotate(270deg);
-      -ms-transform: translate(-50%, -50%) rotate(270deg);
-          transform: translate(-50%, -50%) rotate(270deg);
+  transform: translate(-50%, -50%) rotate(270deg);
 }
 
+@media (max-width: 650px) {
+  .scontrols__scroll-buttons .scroll-button {
+    width: 36px;
+    height: 36px;
+  }
+}
 /* end screen controls style */
+/* spawn animations style */
+.scontrols[data-spawn-anim] {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s;
+}
+.scontrols[data-spawn-anim]._anim_active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
+.front[data-spawn-anim],
+.attainments[data-spawn-anim],
+.portfolio[data-spawn-anim],
+.contact[data-spawn-anim] {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s;
+}
+.front[data-spawn-anim]._anim_active,
+.attainments[data-spawn-anim]._anim_active,
+.portfolio[data-spawn-anim]._anim_active,
+.contact[data-spawn-anim]._anim_active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* end spawn animations style */
 /* front style */
-
 .front h1 {
   color: var(--color-text);
   font-size: 5rem;
@@ -307,26 +274,11 @@ body {
   text-transform: uppercase;
 }
 
-/* end front style */
-
-/* attainments style */
-
-/* ned attainments style */
-
 @media (max-width: 650px) {
-  .front h2,
-  .attainments h2,
-  .portfolio h2,
-  .contact h2 {
-    font-size: 2rem;
-  }
-
-  .scontrols__scroll-buttons .scroll-button {
-    width: 36px;
-    height: 36px;
-  }
-
   .front h1 {
     font-size: 3rem;
   }
 }
+/* end front style */
+/* attainments style */
+/* ned attainments style */
