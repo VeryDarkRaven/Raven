@@ -193,6 +193,9 @@ body {
 .scontrols__scroll-buttons .scroll-button:active svg {
   stroke: var(--color-arrow-active);
 }
+.scontrols__scroll-buttons .scroll-button:disabled {
+  opacity: 0.5;
+}
 .scontrols__scroll-buttons .scroll-button.button_inactive {
   visibility: hidden;
   opacity: 0;
