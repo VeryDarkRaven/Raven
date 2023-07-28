@@ -194,7 +194,7 @@ body {
   stroke: var(--color-arrow-active);
 }
 .scontrols__scroll-buttons .scroll-button:disabled {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .scontrols__scroll-buttons .scroll-button.button_inactive {
   visibility: hidden;
@@ -244,7 +244,7 @@ body {
 .scontrols[data-spawn-anim] {
   opacity: 0;
   transform: translate(0, 0);
-  transition: transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s;
+  transition: transform 0.5s ease 0.8s, opacity 0.5s ease 0.8s;
 }
 .scontrols[data-spawn-anim]._anim_active {
   opacity: 1;
