@@ -118,16 +118,21 @@ body {
 }
 
 /* sections style */
-.front,
-.attainments,
-.portfolio,
-.contact {
+.wrapper__child {
   min-height: 100vh;
+  max-height: 100vh;
+  position: relative;
 }
-.front h2,
-.attainments h2,
-.portfolio h2,
-.contact h2 {
+.wrapper__child .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: inherit;
+  max-height: inherit;
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+}
+.wrapper__child h2 {
   color: var(--color-text);
   font-size: 4rem;
   font-weight: 500;
@@ -136,10 +141,7 @@ body {
 }
 
 @media (max-width: 650px) {
-  .front h2,
-  .attainments h2,
-  .portfolio h2,
-  .contact h2 {
+  .wrapper__child h2 {
     font-size: 2rem;
   }
 }
@@ -151,6 +153,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 20px;
+  pointer-events: none;
 }
 
 .scontrols__scroll-buttons {
@@ -162,6 +165,7 @@ body {
   border: 2px solid var(--color-arrow);
   border-radius: 50%;
   background: none;
+  pointer-events: all;
   width: 50px;
   height: 50px;
   position: absolute;
@@ -244,25 +248,28 @@ body {
 .scontrols[data-spawn-anim] {
   opacity: 0;
   transform: translate(0, 0);
-  transition: transform 0.5s ease 0.8s, opacity 0.5s ease 0.8s;
+  transition: transform 0.5s ease 0.3s, opacity 0.5s ease 0.3s;
 }
 .scontrols[data-spawn-anim]._anim_active {
   opacity: 1;
   transform: translate(0, 0);
 }
 
-.front[data-spawn-anim],
-.attainments[data-spawn-anim],
-.portfolio[data-spawn-anim],
-.contact[data-spawn-anim] {
+.wrapper__child[data-spawn-anim] {
   opacity: 0;
   transform: translate(0, 0);
-  transition: transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s;
+  transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
 }
-.front[data-spawn-anim]._anim_active,
-.attainments[data-spawn-anim]._anim_active,
-.portfolio[data-spawn-anim]._anim_active,
-.contact[data-spawn-anim]._anim_active {
+.wrapper__child[data-spawn-anim]._anim_active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.wrapper__child *:not(h1, h2)[data-spawn-anim] {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: transform 0.5s ease 0.4s, opacity 0.5s ease 0.4s;
+}
+.wrapper__child *:not(h1, h2)[data-spawn-anim]._anim_active {
   opacity: 1;
   transform: translate(0, 0);
 }
