@@ -129,7 +129,9 @@ body {
   left: 50%;
   min-height: inherit;
   max-height: inherit;
+  height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   transform: translate(-50%, -50%);
 }
 .wrapper__child h2 {
