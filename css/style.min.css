@@ -120,6 +120,7 @@ body {
 /* sections style */
 .wrapper__child {
   height: 100vh;
+  max-height: 100%;
   position: relative;
 }
 .wrapper__child .container {
