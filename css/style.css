@@ -155,6 +155,7 @@ body {
   position: fixed;
   z-index: 1;
   width: 100%;
+  max-width: 100vw;
   height: 100%;
   padding: 20px;
   pointer-events: none;
@@ -207,6 +208,7 @@ body {
 .scontrols__scroll-buttons .scroll-button.button_inactive {
   visibility: hidden;
   opacity: 0;
+  pointer-events: none;
 }
 .scontrols__scroll-buttons .top {
   top: 0;
