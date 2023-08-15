@@ -94,8 +94,6 @@ body {
   font-size: 14px;
   font-family: var(--family-text);
   overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
   max-width: 100vw;
 }
 
