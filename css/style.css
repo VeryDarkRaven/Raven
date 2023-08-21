@@ -255,6 +255,23 @@ body {
   }
 }
 /* end screen controls style */
+/* cube layer style */
+.cube-layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cube {
+  width: 200px;
+  height: 200px;
+}
+
+/* end cube layer style */
 /* spawn animations style */
 .scontrols[data-spawn-anim] {
   opacity: 0;
