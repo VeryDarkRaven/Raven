@@ -302,7 +302,9 @@ body {
 /* cube layer style */
 .cube-layer {
   width: 100%;
+  max-width: 100vw;
   height: 100%;
+  pointer-events: none;
   position: fixed;
   z-index: -1;
   display: flex;
@@ -339,7 +341,7 @@ body {
 .wrapper__child *:not(h1, h2)[data-spawn-anim] {
   opacity: 0;
   transform: translate(0, 0);
-  transition: transform 0.5s ease 0.4s, opacity 0.5s ease 0.4s;
+  transition: transform 0.5s ease 1s, opacity 0.5s ease 1s;
 }
 .wrapper__child *:not(h1, h2)[data-spawn-anim]._anim_active {
   opacity: 1;
