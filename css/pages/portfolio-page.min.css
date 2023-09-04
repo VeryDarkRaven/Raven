@@ -1,0 +1,48 @@
+/* portfolio page style */
+.page .container_column-center {
+  gap: 20px;
+}
+.page h1 {
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+.page .page__description {
+  text-align: center;
+}
+
+.portfolio-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.portfolio-page__content .tabs__buttons {
+  border: var(--color-arrow) solid 1px;
+  border-radius: 5px;
+  width: fit-content;
+  transition: box-shadow 0.5s ease 0s;
+}
+.portfolio-page__content .tabs__buttons.only:hover {
+  box-shadow: 0px 0px 10px 2px var(--color-arrow-rgba);
+}
+.portfolio-page__content .tabs__buttons button {
+  border: none;
+  background-color: transparent;
+}
+.portfolio-page__content .tabs__buttons button:hover, .portfolio-page__content .tabs__buttons button.active {
+  box-shadow: 0px -5px 4px -3px var(--color-arrow-rgba), 0px 5px 4px -3px var(--color-arrow-rgba);
+}
+.portfolio-page__content .tabs__buttons button:first-child:hover, .portfolio-page__content .tabs__buttons button:first-child.active {
+  box-shadow: -5px -5px 6px -3px var(--color-arrow-rgba), -5px 5px 6px -3px var(--color-arrow-rgba);
+}
+.portfolio-page__content .tabs__buttons button:last-child:hover, .portfolio-page__content .tabs__buttons button:last-child.active {
+  box-shadow: 5px 5px 6px -3px var(--color-arrow-rgba), 5px -5px 6px -3px var(--color-arrow-rgba);
+}
+
+@media (max-width: 450px) {
+  .portfolio-page__content .tabs__buttons {
+    margin: 0 auto;
+  }
+}
+/* end portfolio style */
