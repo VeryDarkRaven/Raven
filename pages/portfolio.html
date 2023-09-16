@@ -25,14 +25,27 @@
 
 
   <main>
-    <section class="portfolio-page page" data-spawn-anim data-spawn-anim-h>
+    <div class="preloader__screen" data-prldr-screen data-prldr-wh>
+  <div class="preloader__container">
+    <div class="preloader"></div>
+
+    <div class="preloader__percent">
+      <p><span class="percent" data-prldr-percent>0</span><span>%</span></p>
+    </div>
+  </div>
+</div>
+    <div class="cube-layer" data-spawn-anim>
+  <canvas id="cube"></canvas>
+</div>
+
+    <section class="portfolio-page page" data-spawn-anim>
       <div class="container container_column-center">
         <h1>Portfolio page</h1>
   
-        <p class="portfolio-page__description page__description" data-spawn-anim data-spawn-anim-h>Welcome to my portfolio! Here you will find an overview of my web design and development projects, including responsive and interactive websites. My goal is to create aesthetically appealing and functional web solutions that meet the needs of clients.</p>
+        <p class="portfolio-page__description page__description" data-spawn-anim>Welcome to my portfolio! Here you will find an overview of my web design and development projects, including responsive and interactive websites. My goal is to create aesthetically appealing and functional web solutions that meet the needs of clients.</p>
   
 
-        <div class="portfolio-page__content" data-spawn-anim data-spawn-anim-h>
+        <div class="portfolio-page__content" data-spawn-anim>
           <div class="tabs__buttons" data-tab-buttons="portfolio">
             <button class="button active" data-tab-id="all">all</button>
             <button class="button" data-tab-id="landing">landing</button>
@@ -127,7 +140,7 @@
           </div>
         </div>
   
-        <a href="/index.html" class="button">To main</a>
+        <a href="../index.html" class="button">To main</a>
       </div>
     </section>
   </main>

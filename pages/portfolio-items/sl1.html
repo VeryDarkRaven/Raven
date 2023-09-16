@@ -26,11 +26,24 @@
   
 
   <main>
-    <section class="portfolio-item-page page" data-spawn-anim data-spawn-anim-h>
+    <div class="preloader__screen" data-prldr-screen data-prldr-wh>
+  <div class="preloader__container">
+    <div class="preloader"></div>
+
+    <div class="preloader__percent">
+      <p><span class="percent" data-prldr-percent>0</span><span>%</span></p>
+    </div>
+  </div>
+</div>
+    <div class="cube-layer" data-spawn-anim>
+  <canvas id="cube"></canvas>
+</div>
+
+    <section class="portfolio-item-page page" data-spawn-anim>
       <div class="container container_column-center">
         <h1>Site layout 1</h1>
 
-        <div class="page__content container_column-center" data-spawn-anim data-spawn-anim-h>
+        <div class="page__content container_column-center" data-spawn-anim>
           <div class="page__image">
             <a href="https://verydarkraven.github.io/site-layout-1/" target="_blank">
               <img src="../../img/portfolio/1.png" alt="">
@@ -43,7 +56,7 @@
   
           <div class="back-block">
             <a href="../portfolio.html" class="button">Go back</a>
-            <a href="/index.html" class="button">To main</a>
+            <a href="../../index.html" class="button">To main</a>
           </div>
         </div>
       </div>
