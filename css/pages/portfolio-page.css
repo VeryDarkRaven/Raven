@@ -32,4 +32,13 @@
     margin: 0 auto;
   }
 }
+@media (max-width: 410px) {
+  .portfolio-page__items .buttons-block {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .button {
+    padding: 7px;
+  }
+}
 /* end portfolio style */
